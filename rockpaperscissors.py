@@ -1,22 +1,18 @@
-disclaimer = "This game is case-sensitive, so if it says Rock, Paper or Scissors: please do not put 'rock' or 'paper' - only 'Rock' or 'Paper'. [PRESS ENTER TO CONTINUE]"
-cont = input(disclaimer)
-print('\n\n')
-#Go Again or Finish?
-goAgain = "y"
-while goAgain == "y":
+goAgain = True  # GAME LOOP
+while goAgain:
     import time
-    #Variables
-    rpsOptions =["Rock", "Paper", "Scissors"]
+
+    rpsOptions = ["Rock", "Paper", "Scissors"]  # VARIABLES
     userChoice = input('Rock, Paper, or Scissors? ')
-    #Random Picker
-    import random
-    rpsIndexChoice = random.randint(0,2)
+
+    import random  # RANDOM PICKER
+    rpsIndexChoice = random.randint(0, 2)
     rpsChoice = rpsOptions[rpsIndexChoice]
-    #"Dialogue"
-    print('Thinking...')
+
+    print('Thinking...')  # DIALOGUE
     time.sleep(3)
-    #Outcomes
-    if userChoice == "Rock":
+
+    if userChoice.lower() == "rock":  # OUTCOMES
         if rpsChoice == "Rock":
             print('It is a draw, I chose Rock!')
         if rpsChoice == "Paper":
@@ -24,7 +20,7 @@ while goAgain == "y":
         if rpsChoice == "Scissors":
             print('You win, Rock blunts Scissors!')
 
-    elif userChoice == "Paper":
+    elif userChoice.lower() == "paper":
         if rpsChoice == "Rock":
             print('You win, Paper covers Rock!')
         if rpsChoice == "Paper":
@@ -32,7 +28,7 @@ while goAgain == "y":
         if rpsChoice == "Scissors":
             print('I win, Scissors cuts Paper!')
 
-    elif userChoice == "Scissors":
+    elif userChoice.lower() == "scissors":
         if rpsChoice == "Rock":
             print('I win, Rock blunts Scissors!')
         if rpsChoice == "Paper":
@@ -41,20 +37,12 @@ while goAgain == "y":
             print('It is a draw, I chose Scissors!')
 
     else:
-        print('Please choose only Rock, Paper or Scissors.')
+        print('Please choose from Rock, Paper or Scissors.')
 
-    #Ask for another game
-    another = input('\nWould you like to go again? [y/n] ')
-    if another == "y":
+    another = input('\nWould you like to go again? [y/n] ')  # PLAY AGAIN?
+    if another.lower() in ['y', 'yes']:
         print('\n')
-        goAgain = "y"
+        goAgain = True
     else:
-        goAgain = "n"
+        goAgain = False
         exit()
-        
-
-
-
-
-
-
