@@ -1,5 +1,5 @@
 # rockPaperScissors
+a console based game of Rock Paper Scissors
 
-DISCLAIMER: This game has only been tested on machines running Windows and Linux
-
-.exe icon creator: https://freeicons.io/profile/3
+icon:
+<a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a>
